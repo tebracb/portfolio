@@ -1,0 +1,15 @@
+{
+  "name": "portfolio_site",
+  "version": "1.0.0",
+  "description": "Boris responsive portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Bori Temesi",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
