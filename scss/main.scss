@@ -7,7 +7,7 @@
 
 body {
   @include background;
-  background: $primary-color;
+  // background: $primary-color;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -28,7 +28,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(19, 161, 226, 0.829);
   }
 }
 
