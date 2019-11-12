@@ -11,7 +11,9 @@ $background-opacity: 0.91;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background: $home-image;
+      //background: $home-image;
+      background: #0f3b40;
+      //background: #213e4a;
       background-attachment: fixed;
       background-size: cover;
       // background-repeat: no-repeat;
