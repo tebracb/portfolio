@@ -102,7 +102,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: #000;
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -205,6 +205,18 @@ main {
     background: #5b5b5b;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; }
+  .projects img {
+    width: 100%;
+    border: 2px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
 
 #main-footer {
   text-align: center;
