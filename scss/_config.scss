@@ -11,8 +11,8 @@ $background-opacity: 0.91;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      //background: $home-image;
-      background: #0f3b40;
+      background: $home-image;
+      //background: #0f3b40;
       //background: #213e4a;
       background-attachment: fixed;
       background-size: cover;
@@ -29,6 +29,15 @@ $background-opacity: 0.91;
         //background: $primary-color;
       }
     }
+  }
+}
+
+//Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
