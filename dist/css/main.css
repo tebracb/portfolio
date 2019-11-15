@@ -91,6 +91,71 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@keyframes float {
+  0% {
+    transform: translatey(0px); }
+  50% {
+    transform: translatex(-10px); }
+  100% {
+    transform: translatey(0px); } }
+
+@keyframes swing {
+  0% {
+    -webkit-transform: rotate(5deg); }
+  100% {
+    -webkit-transform: rotate(-5deg); } }
+
+.lightbulb {
+  position: absolute;
+  text-align: center;
+  right: 100px;
+  width: 300px;
+  transform-origin: top center;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: swing 2s 2s ease-in-out alternate infinite;
+  top: -30px; }
+  .lightbulb #bulb {
+    width: 38px;
+    height: 39px;
+    position: relative;
+    background: yellow;
+    z-index: -1;
+    bottom: 43px;
+    left: 132px;
+    border-radius: 50px;
+    box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1), 0 0 120px 20px #ffff00; }
+  .lightbulb #bulb-middle {
+    position: relative;
+    margin: -15px auto 0 auto;
+    width: 20px;
+    /* height: 10px; */
+    border-left: 4px solid yellow;
+    border-right: 6px solid yellow;
+    border-top: 11px solid yellow;
+    bottom: 40px;
+    box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1), 0 0 120px 20px yellow;
+    transform: scaleY(-1);
+    transition: all ease 0.3s;
+    z-index: -3; }
+  .lightbulb img {
+    width: 40px;
+    height: auto; }
+  .lightbulb:hover {
+    animation-play-state: paused;
+    transition: all 0.5s ease-out; }
+  .lightbulb.red {
+    right: 190px; }
+    .lightbulb.red #bulb {
+      background: red;
+      box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1), 0 0 120px 20px red; }
+    .lightbulb.red #bulb-middle {
+      border-color: red;
+      box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1), 0 0 120px 20px red; }
+    .lightbulb.red:hover {
+      bottom: 0px;
+      transition: all 0.5s ease-out; }
+
 * {
   box-sizing: border-box; }
 
@@ -113,12 +178,6 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1; }
-
-.kiteImg {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  width: 400px; }
 
 h1,
 h2,
@@ -162,23 +221,6 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
-
-@keyframes float {
-  0% {
-    transform: translatey(0px); }
-  50% {
-    transform: translatey(-20px); }
-  100% {
-    transform: translatey(0px); } }
-
-.kiteImg {
-  box-sizing: border-box;
-  overflow: hidden;
-  transform: translatey(0px);
-  animation: float 6s ease-in-out infinite; }
-  .kiteImg img {
-    width: 100%;
-    height: auto; }
 
 .about-info {
   display: grid;
