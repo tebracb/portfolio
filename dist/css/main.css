@@ -105,6 +105,50 @@
   100% {
     -webkit-transform: rotate(-3deg); } }
 
+@keyframes flicker {
+  0% {
+    opacity: 1; }
+  2% {
+    opacity: 0; }
+  4% {
+    opacity: 1; }
+  6% {
+    opacity: 0; }
+  8% {
+    opacity: 1; }
+  13% {
+    opacity: 1; }
+  15% {
+    opacity: 0; }
+  17% {
+    opacity: 1; }
+  32% {
+    opacity: 1; }
+  34% {
+    opacity: 0; }
+  36% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes glow {
+  0% {
+    transform: translateX(-50%) translateY(-15%) scale(0.5); }
+  50% {
+    transform: translateX(-50%) translateY(-15%) scale(1.15); }
+  100% {
+    transform: translateX(-50%) translateY(-15%) scale(0.5); } }
+
+@keyframes blinkRed {
+  from {
+    background-color: #f00;
+    box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px; }
+  50% {
+    background-color: #ff073a; }
+  to {
+    background-color: #f00;
+    box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px; } }
+
 .lightbulb {
   position: absolute;
   text-align: center;
@@ -132,7 +176,8 @@
     right: 250px; }
     .lightbulb.red #bulb {
       background: #ff073a;
-      box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px; }
+      box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+      animation: blinkRed 0.5s infinite; }
   .lightbulb.green {
     right: 390px;
     top: -25px; }
