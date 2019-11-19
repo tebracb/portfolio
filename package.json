@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "Boris responsive portfolio",
   "main": "index.js",
+  "homepage": "https://tebracb.github.io/portfolio_site",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Bori Temesi",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  },
   "devDependencies": {
     "node-sass": "^4.13.0"
   }
