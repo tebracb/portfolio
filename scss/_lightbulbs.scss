@@ -15,66 +15,37 @@
 
 @keyframes swing {
   0% {
-    -webkit-transform: rotate(5deg);
+    -webkit-transform: rotate(3deg);
   }
   100% {
-    -webkit-transform: rotate(-5deg);
+    -webkit-transform: rotate(-3deg);
   }
+}
+
+@mixin swinging {
+  animation: swing 2s 2s ease-in-out alternate infinite;
+  @include easeOut;
 }
 
 .lightbulb {
   position: absolute;
   text-align: center;
-  // top: -130px;
   right: 100px;
   width: 300px;
-  height: 250px;
+  height: 300px;
   transform-origin: top center;
   box-sizing: border-box;
   overflow: hidden;
-  animation: swing 2s 2s ease-in-out alternate infinite;
 
-  // small version
   top: 0px;
 
-  // box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  // &:hover {
+  //   // transform: translatey(0px);
+  //   // animation: float 4s ease-in-out infinite;
+  // animation-play-state: paused;
 
-  // img {
-  //   width: 70px;
-  //   height: auto;
   // }
 
-  // #bulb {
-  //   width: 65px;
-  //   height: 74px;
-  //   position: relative;
-  //   background: yellow;
-  //   z-index: -1;
-  //   bottom: 85px;
-  //   left: 118px;
-  //   border-radius: 50px;
-  //   // opacity: 0.9;
-  //   box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1),
-  //     0 0 120px 20px #ffff00;
-  // }
-
-  // #bulb-middle {
-  //   position: relative;
-  //   margin: -15px auto 0 auto;
-  //   width: 36px;
-  //   /* height: 10px; */
-  //   border-left: 4px solid yellow;
-  //   border-right: 6px solid yellow;
-  //   border-top: 18px solid yellow;
-  //   bottom: 76px;
-  //   box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1),
-  //     0 0 120px 20px yellow;
-  //   transform: scaleY(-1);
-  //   transition: all ease 0.3s;
-  //   z-index: -3;
-  // }
-
-  //small version
   #bulb {
     width: 34px;
     height: 34px;
@@ -91,36 +62,10 @@
       rgba(251, 255, 0, 0.5) 0 2px 12px;
   }
 
-  // #bulb-middle {
-  //   position: relative;
-  //   margin: -15px auto 0 auto;
-  //   width: 21px;
-  //   height: 12px;
-  //   background: yellow;
-  //   /* border-left: 4px solid yellow; */
-  //   /* border-right: 6px solid yellow; */
-  //   /* border-top: 11px solid yellow; */
-  //   bottom: 40px;
-  //   box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1),
-  //     0 0 120px 20px yellow;
-  //   transform: scaleY(-1);
-  //   transition: all ease 0.3s;
-  //   z-index: -3;
-  // }
-
   img {
     width: 150px;
     height: auto;
-
-    &:hover {
-      //   // transform: translatey(0px);
-      //   // animation: float 4s ease-in-out infinite;
-      animation-play-state: paused;
-      @include easeOut;
-    }
   }
-
-  //small version
 
   &.red {
     right: 250px;
@@ -130,17 +75,11 @@
       box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px,
         rgba(255, 0, 0, 0.5) 0 2px 12px;
     }
-
-    // #bulb-middle {
-    //   border-color: red;
-    //   box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1),
-    //     0 0 120px 20px red;
-    // }
   }
 
   &.green {
     right: 390px;
-    top: -20px;
+    top: -25px;
 
     #bulb {
       left: 135px;
@@ -151,7 +90,26 @@
       height: 30px;
     }
   }
+
+  &.blue {
+    right: 150px;
+    height: 350px;
+    @include swinging;
+
+    #bulb {
+      background: #00ffc4;
+      box-shadow: 0 0 100px 30px #34a58be6, inset #0d2428 0 -1px 9px,
+        rgba(27, 190, 183, 0.73) 0 2px 12px;
+    }
+  }
+}
+
+// Delay each nav item slide by 0.1s
+
+@for $x from 1 through 3 {
+  .lightbulb:nth-child(#{$x}) {
+    transition-delay: $x * 0.7s;
+  }
 }
 
 // rozsaszin: #ff49ad
-//blue: #00ffc4

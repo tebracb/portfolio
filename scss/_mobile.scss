@@ -88,6 +88,21 @@
     }
   }
 
+  .lightbulb {
+    right: 0px;
+    width: 250px;
+
+    #bulb {
+      width: 25px;
+      height: 25px;
+      left: 113px;
+    }
+  }
+
+  .lightbulb.red {
+    right: 100px;
+  }
+
   .projects {
     grid-template-columns: 1fr;
   }
