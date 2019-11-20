@@ -83,17 +83,31 @@
 }
 
 @keyframes blinkRed {
-  from {
-    background-color: #f00;
-    box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px,
+  0% {
+    box-shadow: 0 0 50px 10px red, inset #441313 0 -1px 9px,
+      rgba(255, 0, 0, 0.5) 0 2px 12px;
+  }
+  20% {
+    box-shadow: 0 0 70px 20px red, inset #441313 0 -1px 9px,
       rgba(255, 0, 0, 0.5) 0 2px 12px;
   }
   50% {
-    background-color: #ff073a;
-  }
-  to {
-    background-color: #f00;
     box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px,
+      rgba(255, 0, 0, 0.5) 0 2px 12px;
+  }
+
+  75% {
+    box-shadow: 0 0 70px 20px red, inset #441313 0 -1px 9px,
+      rgba(255, 0, 0, 0.5) 0 2px 12px;
+  }
+
+  90% {
+    box-shadow: 0 0 40px 10px red, inset #441313 0 -1px 9px,
+      rgba(255, 0, 0, 0.5) 0 2px 12px;
+  }
+
+  100% {
+    box-shadow: 0 0 50px 10px red, inset #441313 0 -1px 9px,
       rgba(255, 0, 0, 0.5) 0 2px 12px;
   }
 }
@@ -101,7 +115,6 @@
 .lightbulb {
   position: absolute;
   text-align: center;
-  right: 100px;
   width: 300px;
   height: 300px;
   transform-origin: top center;
@@ -110,6 +123,18 @@
 
   top: 0px;
 
+  #bulb {
+    width: 34px;
+    height: 34px;
+    position: relative;
+    z-index: -1;
+    bottom: 56px;
+    left: 133px;
+    border-radius: 50px;
+    cursor: pointer;
+    // box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1),
+    //   0 0 120px 20px #ffff00;
+  }
   // &:hover {
   //   // transform: translatey(0px);
   //animation: float 4s ease-in-out infinite;
@@ -117,25 +142,19 @@
 
   // }
 
-  #bulb {
-    width: 34px;
-    height: 34px;
-    position: relative;
-    background: yellow;
-    z-index: -1;
-    bottom: 56px;
-    left: 133px;
-    border-radius: 50px;
-    // box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1),
-    //   0 0 120px 20px #ffff00;
-
-    box-shadow: 0 0 100px 30px #ffff00, inset #524312 0 -1px 9px,
-      rgba(251, 255, 0, 0.5) 0 2px 12px;
-  }
-
   img {
     width: 150px;
     height: auto;
+    cursor: pointer;
+  }
+
+  &.yellow {
+    right: 100px;
+    #bulb {
+      background: yellow;
+      box-shadow: 0 0 100px 30px #ffff00, inset #524312 0 -1px 9px,
+        rgba(251, 255, 0, 0.5) 0 2px 12px;
+    }
   }
 
   &.red {
@@ -146,7 +165,7 @@
       box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px,
         rgba(255, 0, 0, 0.5) 0 2px 12px;
       // @include flicker;
-      animation: blinkRed 0.5s infinite;
+      animation: blinkRed 5s ease-in-out infinite;
     }
   }
 
