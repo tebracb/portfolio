@@ -47,7 +47,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.93;
   visibility: hidden;
 
   &.show {
@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: center;
     float: left;
-    width: 50%;
+    width: 90%;
     height: 100vh;
     overflow: hidden;
   }
@@ -69,7 +69,12 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: lighten($primary-color, 10);
+    background: $home-image;
+    background-position: left;
+    width: 10%;
+
+    // background-position: center;
+    // background-repeat: no-repeat;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -82,14 +87,15 @@
 
   //Brandin Side
   &-branding {
-    background: $primary-color;
+    //  background: $home-image;
+    background-position: center;
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
-    &.show {
-      //slide in from bottom
-      transform: translate3d(0, 0, 0);
-    }
+    // &.show {
+    //   //slide in from bottom
+    //   transform: translate3d(0, 0, 0);
+    // }
 
     .portrait {
       width: 250px;
@@ -124,11 +130,38 @@
     font-weight: 300;
     color: set-text-color($primary-color);
     text-decoration: none;
+    // content: none;
+    display: block;
+
     @include easeOut;
 
     &:hover {
       color: $secondary-color;
     }
+
+    &:hover .fa-home:after {
+      content: "HOME";
+    }
+
+    &:hover .fa-user:after {
+      content: "ABOUT";
+    }
+
+    &:hover .fa-eye:after {
+      content: "Work";
+    }
+
+    &:hover .fa-envelope-open-text:after {
+      content: "Contact";
+    }
+
+    // i:hover {
+    //   display: none;
+    // }
+
+    // &::after {
+    //   content: "HOME";
+    // }
   }
 }
 

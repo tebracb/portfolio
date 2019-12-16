@@ -1,8 +1,8 @@
-$primary-color: rgb(78, 78, 78);
+$primary-color: #000;
 $secondary-color: #dada03;
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
-$background-opacity: 0.91;
+$home-image: url(/img/darktexture.jpg);
+$background-opacity: 0.93;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -11,13 +11,10 @@ $background-opacity: 0.91;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      //background: $home-image;
-      //background: #0f3b40;
-      //background: #213e4a;
-      background: #000;
+      background: $home-image;
       background-attachment: fixed;
       background-size: cover;
-      // background-repeat: no-repeat;
+      background-repeat: no-repeat;
 
       &:after {
         content: "";
@@ -27,6 +24,7 @@ $background-opacity: 0.91;
         width: 100%;
         height: 100%;
         z-index: -1;
+        // background: rgba($primary-color, $background-opacity);
         //background: $primary-color;
       }
     }
