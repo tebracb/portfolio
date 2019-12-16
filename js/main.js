@@ -3,6 +3,8 @@ const menu = document.querySelector(".menu");
 const menuNav = document.querySelector(".menu-nav");
 const menuBranding = document.querySelector(".menu-branding");
 const navItems = document.querySelectorAll(".nav-item");
+const greenBulb = document.querySelector(".green img");
+const background = document.querySelector("#bg-img");
 
 //set initial state of menu
 
@@ -31,3 +33,12 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+function changeColor() {
+  background.style.background = "rgb(19, 66, 24)";
+  setTimeout(() => (background.style.background = "black"), 300);
+}
+greenBulb.addEventListener("click", function() {
+  // setInterval(changeColor, 100);
+  changeColor();
+});
