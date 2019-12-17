@@ -73,8 +73,8 @@
     background-position: left;
     width: 10%;
 
-    // background-position: center;
-    // background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -86,30 +86,33 @@
   }
 
   //Brandin Side
-  &-branding {
-    //  background: $home-image;
-    background-position: center;
-    transform: translate3d(0, 100%, 0);
-    @include easeOut;
+  // &-branding {
+  //   background: $home-image;
+  //   background-position: center;
+  //   transform: translate3d(0, 100%, 0);
+  //   @include easeOut;
 
-    // &.show {
-    //   //slide in from bottom
-    //   transform: translate3d(0, 0, 0);
-    // }
+  // &.show {
+  //   //slide in from bottom
+  //   transform: translate3d(0, 0, 0);
+  // }
 
-    .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/profile.jpg");
-      background-size: cover;
-      border-radius: 50%;
-      border: 2px solid $secondary-color;
-    }
-  }
+  // .portrait {
+  //   width: 250px;
+  //   height: 250px;
+  //   background: url("../img/profile.jpg");
+  //   background-size: cover;
+  //   border-radius: 50%;
+  //   border: 2px solid $secondary-color;
+  // }
+  // }
 
   .nav-item {
     transform: translate3d(600px, 0, 0);
     @include easeOut;
+    width: 100%;
+    height: 4rem;
+    text-align: center;
 
     &.show {
       //slide in from right
@@ -119,56 +122,50 @@
     &.current > a {
       color: $secondary-color;
     }
-  }
-
-  .nav-link {
-    display: inline-block;
-    position: relative;
-    font-size: 30px;
-    text-transform: uppercase;
-    padding: 1rem 0;
-    font-weight: 300;
-    color: set-text-color($primary-color);
-    text-decoration: none;
-    // content: none;
-    display: block;
-
-    @include easeOut;
 
     &:hover {
-      color: $secondary-color;
+      .nav-link {
+        color: $ternary-color;
+        // padding: 1rem 0;
+      }
+      .nav-link i {
+        display: none;
+      }
+
+      .nav-link span {
+        display: block;
+      }
     }
 
-    &:hover .fa-home:after {
-      content: "HOME";
+    .nav-link {
+      display: inline-block;
+      position: relative;
+      font-size: 26px;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      font-weight: 300;
+      color: set-text-color($primary-color);
+      text-decoration: none;
+      // content: none;
+      //display: none;
+
+      transition: all 0.3s ease-out;
+
+      i {
+        display: block;
+      }
+
+      span {
+        display: none;
+      }
     }
-
-    &:hover .fa-user:after {
-      content: "ABOUT";
-    }
-
-    &:hover .fa-eye:after {
-      content: "Work";
-    }
-
-    &:hover .fa-envelope-open-text:after {
-      content: "Contact";
-    }
-
-    // i:hover {
-    //   display: none;
-    // }
-
-    // &::after {
-    //   content: "HOME";
-    // }
   }
-}
 
-// Delay each nav item slide by 0.1s
+  // Delay each nav item slide by 0.1s
 
-@for $x from 1 through 4 {
-  .nav-item:nth-child(#{$x}) {
-    transition-delay: $x * 0.1s;
+  @for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+      transition-delay: $x * 0.1s;
+    }
   }
 }
