@@ -1,155 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script
-      src="https://kit.fontawesome.com/92744d2736.js"
-      crossorigin="anonymous"
-    ></script>
 
-    <link rel="stylesheet" href="css/main.css" />
-    <title>View My Work</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://kit.fontawesome.com/92744d2736.js" crossorigin="anonymous"></script>
 
-  <body id="bg-img">
-    <header>
-      <div class="menu-btn">
+  <link rel="stylesheet" href="css/main.css" />
+  <title>View My Work</title>
+</head>
+
+<body id="bg-img">
+  <header>
+    <!-- <div class="menu-btn">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
+      </div> -->
+
+    <nav class="menu">
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="nav-item current">
+          <a href="work.html" class="nav-link">
+            <!-- <i class="far fa-eye"></i> -->
+            <i class="fas fa-code"></i>
+            <span>Work</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">
+            <i class="fas fa-envelope-open-text"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="work">
+    <h1 class="lg-heading">My <span class="text-secondary">Work</span></h1>
+    <h2 class="sm-heading">
+      Take a look at some of my projects...
+    </h2>
+
+    <div class="projects">
+      <div class="item">
+
+        <div class="image-container">
+          <img src="img/projects/chaletscaviar.png" alt="Project" class="projectImg" />
+          <div class="overlay">
+            <i class="fab fa-wordpress-simple fa-7x techIcon"></i>
+          </div>
+        </div>
+
+        <a href="https://dev-chaletscaviarcolorado2.pantheonsite.io/" class="btn-light" target="_blank">
+          <i class="fas fa-eye"></i> Project
+        </a>
+
+        <!-- <a> <i class="fab fa-github"></i> Github </a> -->
       </div>
 
-      <nav class="menu">
-        <ul class="menu-nav">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              <i class="fas fa-home"></i>
-              <span>Home</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">
-              <i class="fas fa-user"></i>
-              <span>About</span>
-            </a>
-          </li>
-          <li class="nav-item current">
-            <a href="work.html" class="nav-link">
-              <!-- <i class="far fa-eye"></i> -->
-              <i class="fas fa-code"></i>
-              <span>Work</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">
-              <i class="fas fa-envelope-open-text"></i>
-              <span>Contact</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <div class="item">
 
-    <main id="work">
-      <h1 class="lg-heading">My <span class="text-secondary">Work</span></h1>
-      <h2 class="sm-heading">
-        Take a look at some of my projects...
-      </h2>
+        <div class="image-container">
+          <img src="img/projects/boff2.PNG" alt="Project" class="projectImg" />
+          <div class="overlay">
+            <img src="img/icons/bootstrap-svg-icon-transparent.png" class="techIcon" />
+          </div>
+        </div>
 
-      <div class="projects">
-        <div class="item">
-          <a href="#!">
-            <img src="img/projects/boff2.PNG" alt="Project" />
-          </a>
-          <a
-            href="https://tebracb.github.io/boff/"
-            class="btn-light"
-            target="_blank"
-          >
+        <div class=btn-div>
+                 <a href="https://tebracb.github.io/boff/" class="btn btn-light" target="_blank">
             <i class="fas fa-eye"></i> Project
           </a>
-          <a
-            href="https://github.com/tebracb/boff"
-            class="btn-dark"
-            target="_blank"
-          >
+          <a href="https://github.com/tebracb/boff" class="btn btn-dark" target="_blank">
             <i class="fab fa-github"></i> Github
           </a>
         </div>
+      </div>
 
-        <div class="item">
-          <a href="#!">
-            <img src="img/projects/QuoteGenerator.png" alt="Project" />
-          </a>
-          <a
-            href="https://tebracb.github.io/quoteGenerator/"
-            target="_blank"
-            class="btn-light"
-          >
+      <div class="item">
+        <div class="image-container">
+          <img src="img/projects/QuoteGenerator.png" alt="Project" class="projectImg" />
+          <div class="overlay">
+            <img src="img/icons/JavaScript_logo.png" class="techIcon"></img>
+          </div>
+        </div>
+
+        <div class=btn-div>
+          <a href="https://tebracb.github.io/quoteGenerator/" target="_blank" class="btn-light">
             <i class="fas fa-eye"></i> Project
           </a>
-          <a
-            href="https://github.com/tebracb/quoteGenerator"
-            target="_blank"
-            class="btn-dark"
-          >
+          <a href="https://github.com/tebracb/quoteGenerator" target="_blank" class="btn-dark">
             <i class="fab fa-github"></i> Github
           </a>
         </div>
+      </div>
 
-        <div class="item">
-          <a href="#!">
-            <img src="img/projects/Game.png" alt="Project" />
-          </a>
-          <a
-            href="https://tebracb.github.io/Turn-based-game/"
-            class="btn-light"
-            target="_blank"
-          >
+      <div class="item">
+        <div class="image-container">
+          <img src="img/projects/Game.png" alt="Project" class="projectImg" />
+          <div class="overlay">
+            <img src="img/icons/Jquery.png" class="techIcon"></img>
+          </div>
+        </div>
+        <div class=btn-div>
+          <a href="https://tebracb.github.io/Turn-based-game/" class="btn-light" target="_blank">
             <i class="fas fa-eye"></i> Project
           </a>
-          <a
-            href="https://github.com/tebracb/Turn-based-game"
-            class="btn-dark"
-            target="_blank"
-          >
+          <a href="https://github.com/tebracb/Turn-based-game" class="btn-dark" target="_blank">
             <i class="fab fa-github"></i> Github
           </a>
         </div>
+      </div>
 
-        <div class="item">
-          <a href="#!">
-            <img src="img/projects/restaurants.png" alt="Project" />
-          </a>
+      <div class="item">
+
+        <div class="image-container">
+          <img src="img/projects/restaurants.png" alt="Project" class="projectImg" />
+          <div class="overlay">
+            <img src="img/icons/react-logo.png" class="techIcon"></img>
+          </div>
+        </div>
+        <div class=btn-div>
           <a href="#" class="btn-light"> <i class="fas fa-eye"></i> Project </a>
-          <a
-            href="https://github.com/tebracb/Restaurant-review-site-II"
-            class="btn-dark"
-            target="_blank"
-          >
-            <i class="fab fa-github"></i> Github
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="#!">
-            <img src="img/projects/boff2.PNG" alt="Project" />
-          </a>
-          <a href="#" class="btn-light" target="_blank">
-            <i class="fas fa-eye"></i> Project
-          </a>
-          <a href="#" class="btn-dark" target="_blank">
+          <a href="https://github.com/tebracb/Restaurant-review-site-II" class="btn-dark" target="_blank">
             <i class="fab fa-github"></i> Github
           </a>
         </div>
       </div>
-    </main>
-    <footer id="main-footer">
-      Copyright &copy; 2019
-    </footer>
 
-    <script src="js/main.js"></script>
-  </body>
+    </div>
+  </main>
+  <footer id="main-footer">
+    Copyright &copy; 2020
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>

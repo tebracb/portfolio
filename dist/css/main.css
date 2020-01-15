@@ -38,7 +38,6 @@
     margin: 0;
     padding: 0;
     background: url(../img/darktexture.jpg);
-    background-position: left;
     background-size: cover;
     list-style: none;
     transition: all 0.5s ease-out; }
@@ -212,7 +211,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: "Assistant", sans-serif;
+  font-family: 'Assistant', sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/darktexture.jpg);
@@ -242,7 +241,8 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    border: 2px solid #da036f;
+    border-bottom: 2px solid #da036f;
+    border-top: 2px solid #da036f;
     width: max-content;
     border-radius: 3px; }
 
@@ -279,7 +279,7 @@ main {
   #about .about-info {
     display: grid;
     grid-gap: 30px;
-    grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr); }
     #about .about-info .bio-image {
       grid-area: bioimage;
@@ -308,14 +308,37 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.7rem; }
-    #work .projects img {
+    #work .projects .techIcon {
+      display: none; }
+    #work .projects .image-container {
+      position: relative;
+      width: 100%; }
+      #work .projects .image-container .overlay {
+        transition: all 0.5s ease-out;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: grey;
+        opacity: 0; }
+      #work .projects .image-container:hover .overlay {
+        opacity: 0.7;
+        border-color: #dada03; }
+        #work .projects .image-container:hover .overlay .techIcon {
+          display: block;
+          opacity: 1;
+          position: absolute;
+          width: 120px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center; }
+    #work .projects .projectImg {
       width: 100%;
+      height: auto;
       min-height: 230px;
       border: 2px #fff solid; }
-      #work .projects img:hover {
-        opacity: 0.5;
-        border-color: #dada03;
-        transition: all 0.5s ease-out; }
 
 #contact {
   background: rgba(0, 0, 0, 0.6); }
@@ -338,21 +361,28 @@ main {
         #contact .boxes div:hover span {
           color: #000; }
 
+.btn-div {
+  text-align: center; }
+
 .btn, .btn-dark, .btn-light {
-  display: block;
+  display: inline-block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem; }
+  margin-bottom: 0.3rem;
+  text-align: center;
+  width: 49%; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #dada03;
     color: #000; }
 
 .btn-dark {
   background: black;
+  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px, rgba(27, 190, 183, 0.73) 0 -2px 0px;
   color: #fff; }
 
 .btn-light {
-  background: #daa403;
+  background: #00ffc4;
+  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px, rgba(27, 190, 183, 0.73) 0 -2px 0px;
   color: #333; }
 
 #main-footer {

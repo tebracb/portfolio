@@ -1,6 +1,6 @@
-@import "config";
-@import "menu";
-@import "lightbulbs";
+@import 'config';
+@import 'menu';
+@import 'lightbulbs';
 
 * {
   box-sizing: border-box;
@@ -13,7 +13,7 @@ body {
   height: 100%;
   margin: 0;
   // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-family: "Assistant", sans-serif;
+  font-family: 'Assistant', sans-serif;
   line-height: 1.5;
 }
 
@@ -30,7 +30,8 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    border: 2px solid $ternary-color;
+    border-bottom: 2px solid $ternary-color;
+    border-top: 2px solid $ternary-color;
     width: max-content;
     //color: $ternary-color;
     border-radius: 3px;
@@ -89,8 +90,8 @@ main {
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-      "bioimage bio bio"
-      "job1 job2 job3";
+      'bioimage bio bio'
+      'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr);
 
     .bio-image {
@@ -136,16 +137,49 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.7rem;
 
-    img {
+    .techIcon {
+      display: none;
+    }
+
+    .image-container {
+      position: relative;
       width: 100%;
-      min-height: 230px;
-      border: 2px #fff solid;
+
+      .overlay {
+        @include easeOut;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: grey;
+        opacity: 0;
+      }
 
       &:hover {
-        opacity: 0.5;
-        border-color: $secondary-color;
-        @include easeOut;
+        .overlay {
+          opacity: 0.7;
+          border-color: $secondary-color;
+
+          .techIcon {
+            display: block;
+            opacity: 1;
+            position: absolute;
+            width: 120px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+          }
+        }
       }
+    }
+
+    .projectImg {
+      width: 100%;
+      height: auto;
+      min-height: 230px;
+      border: 2px #fff solid;
     }
   }
 }
@@ -182,11 +216,17 @@ main {
 
 // Button Styles
 
+.btn-div {
+  text-align: center;
+}
+
 .btn {
-  display: block;
+  display: inline-block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  text-align: center;
+  width: 49%;
 
   &:hover {
     background: $secondary-color;
@@ -197,13 +237,17 @@ main {
 .btn-dark {
   @extend .btn;
   background: darken($primary-color, 50);
+  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px,
+    rgba(27, 190, 183, 0.73) 0 -2px 0px;
   color: #fff;
 }
 
 .btn-light {
   @extend .btn;
   //background: lighten($primary-color, 50);
-  background: #daa403;
+  background: #00ffc4;
+  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px,
+    rgba(27, 190, 183, 0.73) 0 -2px 0px;
   color: #333;
 }
 
@@ -216,4 +260,4 @@ main {
   border-top: 2px solid $ternary-color;
 }
 
-@import "mobile";
+@import 'mobile';
