@@ -322,7 +322,7 @@ main {
         background-color: grey;
         opacity: 0; }
       #work .projects .image-container:hover .overlay {
-        opacity: 0.7;
+        opacity: 0.8;
         border-color: #dada03; }
         #work .projects .image-container:hover .overlay .techIcon {
           display: block;
@@ -370,19 +370,20 @@ main {
   border: 0;
   margin-bottom: 0.3rem;
   text-align: center;
-  width: 49%; }
+  width: 49%;
+  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px, rgba(27, 190, 183, 0.73) 0 -2px 0px; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #dada03;
-    color: #000; }
+    background: #134237;
+    color: #000;
+    background: #00ffc4;
+    box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px, rgba(27, 190, 183, 0.73) 0 -2px 0px; }
 
 .btn-dark {
   background: black;
-  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px, rgba(27, 190, 183, 0.73) 0 -2px 0px;
   color: #fff; }
 
 .btn-light {
-  background: #00ffc4;
-  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px, rgba(27, 190, 183, 0.73) 0 -2px 0px;
+  background: #00ffc4c2;
   color: #333; }
 
 #main-footer {
@@ -400,7 +401,8 @@ main {
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding: 2rem 5rem; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
@@ -425,10 +427,12 @@ main {
       width: 150px;
       background-size: cover; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+  #work .projects {
+    grid-template-columns: repeat(2, 1fr); }
+    #work .projects .projectImg {
+      min-height: 120px; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -447,5 +451,5 @@ main {
       left: 113px; }
   .lightbulb.red {
     right: 100px; }
-  .projects {
+  #work .projects {
     grid-template-columns: 1fr; } }

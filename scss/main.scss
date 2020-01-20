@@ -157,7 +157,7 @@ main {
 
       &:hover {
         .overlay {
-          opacity: 0.7;
+          opacity: 0.8;
           border-color: $secondary-color;
 
           .techIcon {
@@ -227,27 +227,31 @@ main {
   margin-bottom: 0.3rem;
   text-align: center;
   width: 49%;
+  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px,
+    rgba(27, 190, 183, 0.73) 0 -2px 0px;
 
   &:hover {
-    background: $secondary-color;
+    background: #134237;
     color: set-text-color($secondary-color);
+    background: #00ffc4;
+    box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px,
+      rgba(27, 190, 183, 0.73) 0 -2px 0px;
   }
 }
 
 .btn-dark {
   @extend .btn;
   background: darken($primary-color, 50);
-  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px,
-    rgba(27, 190, 183, 0.73) 0 -2px 0px;
+  //border: 2px solid #00ffc4;
+  //box-sizing: border-box;
+
   color: #fff;
 }
 
 .btn-light {
   @extend .btn;
   //background: lighten($primary-color, 50);
-  background: #00ffc4;
-  box-shadow: 0 0 1px 2px #34a58be6, inset #134237 0 0 1px,
-    rgba(27, 190, 183, 0.73) 0 -2px 0px;
+  background: #00ffc4c2;
   color: #333;
 }
 
