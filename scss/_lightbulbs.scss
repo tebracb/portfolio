@@ -82,33 +82,33 @@
   }
 }
 
-@keyframes blinkRed {
+@keyframes blinkMagenta {
   0% {
-    box-shadow: 0 0 50px 10px red, inset #441313 0 -1px 9px,
-      rgba(255, 0, 0, 0.5) 0 2px 12px;
+    box-shadow: 0 0 50px 10px #ff49ad, inset #84144c 0 -1px 9px 1px,
+      #c12eb691 0 2px 12px;
   }
   20% {
-    box-shadow: 0 0 70px 20px red, inset #441313 0 -1px 9px,
-      rgba(255, 0, 0, 0.5) 0 2px 12px;
+    box-shadow: 0 0 70px 20px #ff49ad, inset #84144c 0 -1px 9px 1px,
+      #c12eb6d4 0 2px 12px;
   }
   50% {
-    box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px,
-      rgba(255, 0, 0, 0.5) 0 2px 12px;
+    box-shadow: 0 0 100px 30px #ff49ad, inset #84144c 0 -1px 9px 1px,
+      #c12eb6d4 0 2px 12px;
   }
 
   75% {
-    box-shadow: 0 0 70px 20px red, inset #441313 0 -1px 9px,
-      rgba(255, 0, 0, 0.5) 0 2px 12px;
+    box-shadow: 0 0 70px 20px #ff49ad, inset #84144c 0 -1px 9px 1px,
+      #c12eb6d4 0 2px 12px;
   }
 
   90% {
-    box-shadow: 0 0 40px 10px red, inset #441313 0 -1px 9px,
-      rgba(255, 0, 0, 0.5) 0 2px 12px;
+    box-shadow: 0 0 40px 10px #ff49ad, inset #84144c 0 -1px 9px 1px,
+      #c12eb691 0 2px 12px;
   }
 
   100% {
-    box-shadow: 0 0 50px 10px red, inset #441313 0 -1px 9px,
-      rgba(255, 0, 0, 0.5) 0 2px 12px;
+    box-shadow: 0 0 50px 10px #ff49ad, inset #84144c 0 -1px 9px 1px,
+      #c12eb691 0 2px 12px;
   }
 }
 
@@ -157,15 +157,15 @@
     }
   }
 
-  &.red {
+  &.magenta {
     right: 250px;
 
     #bulb {
-      background: #ff073a;
-      box-shadow: 0 0 100px 30px red, inset #441313 0 -1px 9px,
-        rgba(255, 0, 0, 0.5) 0 2px 12px;
+      background: #da036f;
+      box-shadow: 0 0 100px 30px #ff49ad, inset #84144c 0 -1px 9px 1px,
+        #c12eb6d4 0 2px 12px;
       // @include flicker;
-      animation: blinkRed 5s ease-in-out infinite;
+      animation: blinkMagenta 5s ease-in-out infinite;
     }
   }
 
