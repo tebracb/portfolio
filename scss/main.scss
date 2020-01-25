@@ -14,6 +14,7 @@ body {
   margin: 0;
   // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: 'Assistant', sans-serif;
+  font-family: 'Lato', sans-serif;
   line-height: 1.5;
 }
 
@@ -24,7 +25,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   &.sm-heading {
@@ -61,12 +62,17 @@ main {
     margin-top: 1rem;
 
     a {
-      padding: 0.4rem;
+      padding: 0 1rem 0 0;
 
       &:hover {
         color: $secondary-color;
         @include easeOut();
       }
+    }
+
+    &.contact {
+      margin-top: 0;
+      text-align: center;
     }
   }
 
@@ -110,6 +116,10 @@ main {
 
     job-1 {
       grid-area: job1;
+
+      table {
+        border-spacing: 20px 10px;
+      }
     }
 
     job-2 {
@@ -124,6 +134,20 @@ main {
       background: lighten($primary-color, 15);
       padding: 0.5rem;
       border-bottom: $secondary-color 5px solid;
+
+      .cv {
+        margin-top: 20px;
+      }
+    }
+
+    span a {
+      text-decoration: underline;
+      text-decoration-color: $ternary-color;
+
+      &:hover {
+        color: $secondary-color;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -151,7 +175,7 @@ main {
         top: 0;
         height: 100%;
         width: 100%;
-        background-color: grey;
+        background-color: #202020a8;
         opacity: 0;
       }
 
@@ -179,6 +203,7 @@ main {
       width: 100%;
       height: auto;
       min-height: 230px;
+      vertical-align: top;
       border: 2px #fff solid;
     }
   }
@@ -223,6 +248,7 @@ main {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
+  margin-top: 5px;
   border: 0;
   margin-bottom: 0.3rem;
   text-align: center;

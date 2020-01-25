@@ -204,6 +204,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Assistant', sans-serif;
+  font-family: 'Lato', sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/darktexture.jpg);
@@ -227,7 +228,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 5rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -254,10 +255,13 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0 1rem 0 0; }
       main .icons a:hover {
         color: #dada03;
         transition: all 0.5s ease-out; }
+    main .icons.contact {
+      margin-top: 0;
+      text-align: center; }
   main#home {
     overflow: hidden;
     margin-left: 20vh;
@@ -284,6 +288,8 @@ main {
       font-size: 1.5rem; }
     #about .about-info job-1 {
       grid-area: job1; }
+      #about .about-info job-1 table {
+        border-spacing: 20px 10px; }
     #about .about-info job-2 {
       grid-area: job1; }
     #about .about-info job-3 {
@@ -292,6 +298,14 @@ main {
       background: #262626;
       padding: 0.5rem;
       border-bottom: #dada03 5px solid; }
+      #about .about-info .job .cv {
+        margin-top: 20px; }
+    #about .about-info span a {
+      text-decoration: underline;
+      text-decoration-color: #da036f; }
+      #about .about-info span a:hover {
+        color: #dada03;
+        text-decoration: none; }
 
 #work {
   background: rgba(0, 0, 0, 0.6); }
@@ -310,7 +324,7 @@ main {
         top: 0;
         height: 100%;
         width: 100%;
-        background-color: grey;
+        background-color: #202020a8;
         opacity: 0; }
       #work .projects .image-container:hover .overlay {
         opacity: 0.8;
@@ -329,6 +343,7 @@ main {
       width: 100%;
       height: auto;
       min-height: 230px;
+      vertical-align: top;
       border: 2px #fff solid; }
 
 #contact {
@@ -357,6 +372,7 @@ main {
 .btn, .btn-dark, .btn-light {
   display: inline-block;
   padding: 0.5rem 1rem;
+  margin-top: 5px;
   border: 0;
   margin-bottom: 0.3rem;
   text-align: center;
@@ -384,9 +400,15 @@ main {
   height: 60px;
   border-top: 2px solid #da036f; }
 
+@media screen and (min-width: 1281px) {
+  #contact .boxes {
+    margin-top: 10rem; } }
+
 @media screen and (min-width: 769px) and (max-width: 1280px) {
-  .projects {
+  #work .projects {
     grid-template-columns: repeat(3, 1fr); }
+    #work .projects .projectImg {
+      min-height: 170px; }
   main {
     padding: 3rem 8rem; }
     main #home h1 {
@@ -423,7 +445,7 @@ main {
       height: 150px;
       width: 150px;
       background-size: cover; }
-  .about-info {
+  #about .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   #work .projects {
@@ -439,7 +461,8 @@ main {
       .menu ul.menu-nav .nav-item {
         width: 60px; }
   main {
-    padding: 2rem; }
+    padding: 2rem;
+    margin-top: 60px; }
     main#home {
       margin: auto; }
       main#home h1 {
