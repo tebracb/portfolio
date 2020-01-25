@@ -29,12 +29,11 @@ h3 {
 
   &.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    border-bottom: 2px solid $ternary-color;
-    border-top: 2px solid $ternary-color;
-    width: max-content;
-    //color: $ternary-color;
-    border-radius: 3px;
+    padding: 0.2rem 0rem;
+    // border-bottom: 2px solid $ternary-color;
+    // width: max-content;
+    text-decoration: underline;
+    text-decoration-color: $ternary-color;
   }
 }
 
@@ -74,7 +73,8 @@ main {
   &#home {
     overflow: hidden;
     //  width: 100vh;
-    margin-left: 30vh;
+    margin-left: 20vh;
+    height: 100vh;
     //position: absolute;
     // right: 0;
     h1 {
@@ -198,12 +198,12 @@ main {
     div {
       font-size: 1.5rem;
       border: 2px #fff solid;
-      padding: 1.5rem 2.5rem;
+      padding: 1.5rem;
       margin-bottom: 3rem;
       @include easeOut;
 
       &:hover {
-        padding: 0.5rem 1.5rem;
+        // padding: 2rem;
         background: $secondary-color;
         color: set-text-color($secondary-color);
         span {
@@ -259,7 +259,8 @@ main {
   text-align: center;
   padding: 1rem;
   background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
+  // color: set-text-color($primary-color);
+  color: #777777;
   height: 60px;
   border-top: 2px solid $ternary-color;
 }

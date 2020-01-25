@@ -12,6 +12,22 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  main {
+    padding: 3rem 8rem;
+
+    #home h1 {
+      margin-top: 10vh;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    &.lg-heading {
+      font-size: 4rem;
+    }
+  }
 }
 
 //Tablets and small laptops
@@ -41,7 +57,6 @@
 
   .menu-nav {
     height: 75vh;
-    transform: translate3d(-100%, 0, 0);
     font-size: 24px;
   }
 
@@ -81,33 +96,71 @@
 //Smartphones
 
 @include mediaSm {
+  .menu {
+    width: 100%;
+
+    ul.menu-nav {
+      height: 60px;
+
+      .nav-item {
+        width: 60px;
+      }
+    }
+  }
   main {
     padding: 2rem;
 
-    &#home h1 {
-      margin-top: 10vh;
+    &#home {
+      margin: auto;
+
+      h1 {
+        margin-top: 30vh;
+      }
     }
 
     .lg-heading {
       margin-top: 1rem;
-      font-size: 5rem;
+      font-size: 3rem;
     }
   }
 
   .lightbulb {
-    right: 0px;
-    width: 250px;
+    top: 30px;
 
-    #bulb {
-      width: 25px;
-      height: 25px;
-      left: 113px;
+    &.yellow {
+      right: -30px;
+    }
+
+    &.blue {
+      right: 0px;
+    }
+
+    &.magenta {
+      right: 70px;
+    }
+
+    &.green {
+      right: 150px;
+      top: -10px;
     }
   }
+  //   right: 0px;
+  //   width: 250px;
 
-  .lightbulb.red {
-    right: 100px;
-  }
+  //   #bulb {
+  //     width: 25px;
+  //     height: 25px;
+  //     left: 113px;
+  //   }
+  // }
+
+  // .lightbulb.red {
+  //   right: 100px;
+  // }
+
+  // .lightbulb.yellow {
+  //   right: -25px;
+  // }
 
   #work {
     .projects {
