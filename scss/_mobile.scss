@@ -125,6 +125,7 @@
 
     &#home {
       margin: auto;
+      overflow: hidden;
 
       h1 {
         margin-top: 30vh;
@@ -141,11 +142,20 @@
     top: 30px;
 
     &.yellow {
-      right: -30px;
+      right: 0px;
+      width: 200px;
+
+      #bulb {
+        background: yellow;
+        box-shadow: 0 0 80px 20px #ffff00, inset #524312 0 -1px 9px,
+          rgba(251, 255, 0, 0.5) 0 2px 12px;
+        left: 83px;
+      }
     }
 
     &.blue {
       right: 0px;
+      top: -49px;
     }
 
     &.magenta {
@@ -155,6 +165,14 @@
     &.green {
       right: 150px;
       top: -10px;
+      width: 200px;
+      overflow: hidden;
+
+      #bulb {
+        left: 85px;
+        box-shadow: 0 0 80px 20px #59da5e, inset #1a5821 0 -1px 9px,
+          rgba(0, 239, 61, 0.98) 0 2px 12px;
+      }
     }
   }
   //   right: 0px;
