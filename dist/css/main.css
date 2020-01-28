@@ -481,12 +481,21 @@ main {
         box-shadow: 0 0 80px 20px #ffff00, inset #524312 0 -1px 9px, rgba(251, 255, 0, 0.5) 0 2px 12px;
         left: 83px; }
     .lightbulb.blue {
-      right: 0px;
-      top: -49px; }
+      right: 50px;
+      top: -49px;
+      width: 200px;
+      animation: swing 3s 3s ease-in-out alternate infinite; }
+      .lightbulb.blue #bulb {
+        box-shadow: 0 0 80px 20px #34a58be6, inset #0d2428 0 -1px 9px, rgba(27, 190, 183, 0.73) 0 2px 12px;
+        left: 84px; }
     .lightbulb.magenta {
-      right: 70px; }
+      width: 200px;
+      right: 100px; }
+      .lightbulb.magenta #bulb {
+        left: 84px;
+        box-shadow: 0 0 80px 20px #ff49ad, inset #84144c 0 -1px 9px 1px, #c12eb6d4 0 2px 12px; }
     .lightbulb.green {
-      right: 150px;
+      right: 180px;
       top: -10px;
       width: 200px;
       overflow: hidden; }
