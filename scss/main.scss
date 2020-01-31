@@ -31,8 +31,6 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 0rem;
-    // border-bottom: 2px solid $ternary-color;
-    // width: max-content;
     text-decoration: underline;
     text-decoration-color: $ternary-color;
   }
@@ -55,7 +53,6 @@ header {
 
 main {
   padding: 4rem 10rem;
-  // height: 100%;
   min-height: calc(100vh - 60px);
 
   .icons {
@@ -78,11 +75,8 @@ main {
 
   &#home {
     overflow: hidden;
-    //  width: 100vh;
     margin-left: 20vh;
     height: 100vh;
-    //position: absolute;
-    // right: 0;
     h1 {
       margin-top: 20vh;
     }
@@ -268,15 +262,11 @@ main {
 .btn-dark {
   @extend .btn;
   background: darken($primary-color, 50);
-  //border: 2px solid #00ffc4;
-  //box-sizing: border-box;
-
   color: #fff;
 }
 
 .btn-light {
   @extend .btn;
-  //background: lighten($primary-color, 50);
   background: #00ffc4c2;
   color: #333;
 }
@@ -285,7 +275,6 @@ main {
   text-align: center;
   padding: 1rem;
   background: darken($primary-color, 10);
-  // color: set-text-color($primary-color);
   color: #777777;
   height: 60px;
   border-top: 2px solid $ternary-color;
