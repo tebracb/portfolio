@@ -1,14 +1,11 @@
 @keyframes float {
   0% {
-    // box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
   }
   50% {
-    // box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
     transform: translatex(-10px);
   }
   100% {
-    // box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
   }
 }
@@ -131,21 +128,11 @@
     bottom: 56px;
     left: 133px;
     border-radius: 50px;
-    cursor: pointer;
-    // box-shadow: inset 0px 10px 15px -5px rgba(10, 30, 60, 0.1),
-    //   0 0 120px 20px #ffff00;
   }
-  // &:hover {
-  //   // transform: translatey(0px);
-  //animation: float 4s ease-in-out infinite;
-  // animation-play-state: paused;
-
-  // }
 
   img {
     width: 150px;
     height: auto;
-    cursor: pointer;
   }
 
   &.yellow {
@@ -198,10 +185,10 @@
 
 // Delay each nav item slide by 0.1s
 
-@for $x from 1 through 3 {
-  .lightbulb:nth-child(#{$x}) {
-    transition-delay: $x * 0.7s;
-  }
-}
+// @for $x from 1 through 3 {
+//   .lightbulb:nth-child(#{$x}) {
+//     transition-delay: $x * 0.7s;
+//   }
+// }
 
 // rozsaszin: #ff49ad
